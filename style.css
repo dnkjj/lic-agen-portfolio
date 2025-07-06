@@ -1,14 +1,16 @@
 body {
+  margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
   line-height: 1.6;
-  background: #fdfdfd;
 }
 
 header {
   background: #003366;
   color: white;
   text-align: center;
-  padding: 3em 1em;
+  padding: 4em 1em 2em;
 }
 
 nav ul {
@@ -32,16 +34,27 @@ nav ul li a {
 }
 
 main {
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 3em 1em;
+  padding: 3em 2em;
   background: #ffffff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+  border-radius: 12px;
+  margin-top: 2em;
 }
 
 section {
-  margin-bottom: 3em;
+  margin-bottom: 4em;
+}
+
+section h2 {
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+  color: #003366;
+}
+
+ul {
+  padding-left: 1.2em;
 }
 
 form {
@@ -51,10 +64,11 @@ form {
 }
 
 form input, form textarea {
-  padding: 0.75em;
+  padding: 1em;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
+  border-radius: 8px;
+  font-size: 1em;
+  width: 100%;
 }
 
 form button {
@@ -62,13 +76,31 @@ form button {
   background: #0072ce;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1em;
+  transition: background 0.3s ease;
 }
 
 form button:hover {
   background: #005a9e;
+}
+
+blockquote {
+  font-style: italic;
+  background: #f0f0f0;
+  padding: 1em;
+  border-left: 4px solid #0072ce;
+  border-radius: 4px;
+  margin: 1em 0;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5em;
+  background: #003366;
+  color: white;
+  margin-top: 3em;
 }
 
 .whatsapp-button {
@@ -77,30 +109,21 @@ form button:hover {
   right: 20px;
   background: #25D366;
   color: white;
-  padding: 1em;
-  border-radius: 50px;
+  padding: 0.8em 1.5em;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
 }
 
-blockquote {
-  font-style: italic;
-  background: #f0f0f0;
-  padding: 1em;
-  border-left: 4px solid #0072ce;
-}
-
-footer {
-  text-align: center;
-  padding: 1em;
-  background: #003366;
-  color: white;
-}
-
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   nav ul {
     flex-direction: column;
     align-items: center;
+  }
+
+  main {
+    padding: 2em 1em;
   }
 }
